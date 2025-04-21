@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "StyleScape Fashion Mall"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "e832bd6f-a82a-49ea-a543-c9faaafc1ca9"
+  }
+}

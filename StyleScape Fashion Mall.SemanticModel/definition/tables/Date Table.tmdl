@@ -1,0 +1,103 @@
+table 'Date Table'
+	lineageTag: 39b6ea53-cc90-4c56-98ac-9eef76dca9e8
+
+	column Date
+		formatString: General Date
+		lineageTag: 8e7e9294-4174-4e78-80af-cc610074805b
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		variation Variation
+			isDefault
+			relationship: dd599da3-f765-42f7-866e-b5734a716aa9
+			defaultHierarchy: LocalDateTable_d15a1697-a174-4751-96ad-0452732424f9.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: string
+		lineageTag: c25676fd-4e91-4d11-bfe9-0e48b913e0de
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthName
+		lineageTag: 0339cf55-d280-4d1c-9136-4a92d659cecb
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [MonthName]
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeekNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: b643c044-c688-4b35-8c98-9f1a09a97211
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [WeekNumber]
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeekDay
+		dataType: string
+		lineageTag: 7f61e11f-2092-484b-9a3b-36c90739bf3a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [WeekDay]
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeekDayName
+		dataType: string
+		lineageTag: 527e9885-9c50-42d3-ae2d-4be7b725c31f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [WeekDayName]
+		sortByColumn: WeekDay
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsLastWeek
+		formatString: 0
+		lineageTag: 6bf0daab-3f29-49f8-99ca-ac2e6bac1eb5
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [IsLastWeek]
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeekDayShortName
+		lineageTag: af8f25c8-fd03-4f49-904f-e7e2d3dd2826
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [WeekDayShortName]
+		sortByColumn: WeekDay
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Date Table' = calculated
+		mode: import
+		source =
+				
+				VAR MinDate = Min(Orders[salesdate])
+				VAR MaxDate = MAX(Orders[salesdate])
+				VAR LatestWeekNumber = WEEKNUM(MaxDate, 2)
+				RETURN
+				ADDCOLUMNS(
+				    CALENDAR(MinDate, MaxDate),
+				    "Year", YEAR([Date]),
+				    "MonthName", FORMAT([Date], "MMMM"),
+				    "WeekNumber", WEEKNUM([Date], 2),
+				    "WeekDay", WEEKDAY([Date], 2),
+				    "WeekDayName", FORMAT([Date], "DDDD"),
+				    "WeekDayShortName", FORMAT([Date], "DDD"),
+				    "IsLastWeek", IF(WEEKNUM([Date], 2) = LatestWeekNumber, 1, 0)
+				
+				)
+
+	annotation PBI_Id = f3c81a69f369482ba3842f53e29baca2
+

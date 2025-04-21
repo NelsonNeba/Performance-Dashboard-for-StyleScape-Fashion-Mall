@@ -1,0 +1,224 @@
+ProductID,ProductName,Price,SubCategory,Category
+1,Pink Midi Maxi Dress,20800.00,Dress,Women
+2,Pink Abstract Print Mesh Kimono Bandeau Dress,16800.00,Dress,Women
+3,Chartreus Pleated Cut Detail Cami Dress,17800.00,Dress,Women
+4,Burgundy One Shoulder Cutout Waist Dress,23800.00,Dress,Women
+5,Pink Stripe Knit Split Maxi Dress,21800.00,Dress,Women
+6,Orange Knot Front Satin Maxi Dress,23800.00,Dress,Women
+7,Nude Diamante Chain Satin Mini Dress,14800.00,Dress,Women
+8,Blue Ruched Side Strappy Mini Dress,14800.00,Dress,Women
+9,Black Laced Up Back S/S Mini Dress,12800.00,Dress,Women
+10,Blue Strappy Satin Midi Dress,16800.00,Dress,Women
+11,Navy Sweetheart Nackline Mesh Dress,16800.00,Dress,Women
+12,Blue V Neck Mini Dress,13800.00,Dress,Women
+13,Lilac Faux Feather Dress,14800.00,Dress,Women
+14,Green Pleated Waist Shirt Dress,15800.00,Dress,Women
+15,Black Strappy Satin Mini Dress With Folded Neckline,14800.00,Dress,Women
+16,Blue Print Split Maxi Dress,19800.00,Dress,Women
+17,Light Blue Wash Long Straight Leg Jeans,21800.00,Jeans,Women
+18,Light Blue Straight Leg Jeans,21800.00,Jeans,Women
+19,Light Blue Wash Knee Rip Hem Wide Leg Flares,25800.00,Jeans,Women
+20,Light Blue Wash Pocket Skinny Jeans,20800.00,Jeans,Women
+21,Wash Blue Ripped Long Leg Straight Jeans,25800.00,Jeans,Women
+22,Washed Blue Ripped Split Hem Jeans,25800.00,Jeans,Women
+23,BLUE KNEE RIPPED JEANS,21800.00,Jeans,Women
+24,BLUE WAISTBAND WIDE LEG JEANS,21800.00,Jeans,Women
+25,LIGHT BLUE THIGH RIP DENIM SHORT,18800.00,Jeans,Women
+26,BLUE WASH HIGH WAISTED RIPPED DENIM SHORTS,18800.00,Jeans,Women
+27,BLACK DISTRESSED DENIM SHORT,18800.00,Jeans,Women
+28,BLUE WASH HIGH WAISTED TURN UP RIPPED DENIM SHORT,18800.00,Jeans,Women
+29,DARK BLUE WASH HIGH WAISTED RIPPED DENIM SHORT,18800.00,Jeans,Women
+30,BLUE DISTRESSED JEANS,21800.00,Jeans,Women
+31,BLACK FLARE JEANS,21800.00,Jeans,Women
+32,Green Print Long Sleeve Bodysuit,11800.00,Body Suit,Women
+33,White Cutout Bodysuit,13800.00,Body Suit,Women
+34,Red Bandeau Mesh Bodysuit,12800.00,Body Suit,Women
+35,Pink/White Zip Front Mesh Bodysuit,10800.00,Body Suit,Women
+36,Blue Multi Print Long Sleeve Bodysuit,11800.00,Body Suit,Women
+37,ORANGE-YELLOW BODYSUIT,11800.00,Body Suit,Women
+38,PINK/PURPLE BODYSUIT,11800.00,Body Suit,Women
+39,PINK LONG SLEEVE BODYSUIT,10800.00,Body Suit,Women
+40,ZIBRA STRECTH SATIN UNDERWIRED BODYSUIT,11800.00,Body Suit,Women
+41,WHITE SLINKY CUT OUT BODYSUIT,12800.00,Body Suit,Women
+42,Renua Striped Silky Dress - Orange,50800.00,Dress,Women
+43,Renua Striped Silky Dress - Mustard,50800.00,Dress,Women
+44,Amira Technical Organza Oversized Long Sleeve Shirt Dress,46600.00,Dress,Women
+45,Mawi Faux Croc Leather Dress - Sapphire,58200.00,Dress,Women
+46,Mawi Faux Croc Leather Dress - Hot Pink,58200.00,Dress,Women
+47,Zuhi Keyhole Dress - Hot Pink,37600.00,Dress,Women
+48,Simona Mini Dress - Blue,85400.00,Dress,Women
+49,Zuhi Keyhole Dress - Black,37600.00,Dress,Women
+50,Simona Mini Dress - Hot Pink,85400.00,Dress,Women
+51,Lolita Knit Dress,32400.00,Dress,Women
+52,Mawi Faux Croc Leather Dress - Coffee,61200.00,Dress,Women
+53,Acacia Ruched Sleeveless Dress - Yellow,51300.00,Dress,Women
+54,Imade Knitted Long Sleeve Braid Dress - Yellow,56100.00,Dress,Women
+55,Imade Knitted Long Sleeve Braid Dress - Pink,56100.00,Dress,Women
+56,Crew Neck Long Sleeve Mesh Dress- Femi Print Baby Blue,47100.00,Dress,Women
+57,Mesh Crew Neck Long Sleeve Mini Dress- Femi Print Purple,31900.00,Dress,Women
+58,Bea Buttoned Cotton Maxi Dress - White,31900.00,Dress,Women
+59,Radiant Night Heeled Sandals - Silver,21950.85,Shoes,Women
+60,Lost Your Chance Knee High Boots - Silver,43910.85,Shoes,Women
+61,Radiant Night Heeled Sandals - Gold,21950.85,Shoes,Women
+62,Always On My Mind Heeled Sandals - Gold,21950.85,Shoes,Women
+63,I'm Onto You Sneakers - Black,25610.85,Shoes,Women
+64,Got The Look Booties - Ivory,25610.85,Shoes,Women
+65,Sasha Buckle Booties - Black,43910.85,Shoes,Women
+66,Lost Your Chance Knee High Boots - Black,43910.85,Shoes,Women
+67,Fun Nights Knee High Heeled Boots - Blue,36590.85,Shoes,Women
+68,Alessia Embellished Knee High Boots - Denim,51230.85,Shoes,Women
+69,Rhinestone Baby Heeled Mules - Neon Yellow,25610.85,Shoes,Women
+70,Cozy But Cute Wedges - Green,21950.85,Shoes,Women
+71,Got You Jealous Heeled Sandals - Pink,32015.85,Shoes,Women
+72,All That Sparkle Over The Knee Boots - Pink,54890.85,Shoes,Women
+73,Miss The Moment Knee High Heeled Boots - Cream,54890.85,Shoes,Women
+74,Feeling Trendy Cargo Boots - White,45740.85,Shoes,Women
+75,Get Used To It Knee High Boots - Pink,64040.85,Shoes,Women
+76,Always Your Babe Over The Knee Heeled Boots - Rose,32015.85,Shoes,Women
+77,On My Way Out Velvet Boots - Pink,27440.85,Shoes,Women
+78,Carnival Nights Embellished Boots - Blue,27440.85,Shoes,Women
+79,Always Your Babe Over The Knee Heeled Boots - Purple,54890.85,Shoes,Women
+80,Got A Good Thing Sneakers - Denim,27440.85,Shoes,Women
+81,Cool Vibes Sneakers - Denim,27440.85,Shoes,Women
+82,Old School Sneakers - Green,32015.85,Shoes,Women
+83,Fuzzy Moments Slippers - Black,10970.85,Shoes,Women
+84,Sunshine Fine Foam Slides - Black,14630.85,Shoes,Women
+85,Mckinley Embellished Novelty Heels - Purple,29270.85,Shoes,Women
+86,Early Notice Pumps - Purple,19205.85,Shoes,Women
+87,It's Happening Pumps - Black,29270.85,Shoes,Women
+88,Point You In The Right Direction Heel - Black,25610.85,Shoes,Women
+89,Nothing But The Best Wrap Up Heels - Gold,29270.85,Shoes,Women
+90,Always Bold Platform Heels - Gold,25610.85,Shoes,Women
+91,Acting Nice Ballet Flats - Silver,13715.85,Shoes,Women
+92,Everyday Flats - Nude,14630.85,Shoes,Women
+93,Searching For Me Platform Heels - Pink,20578.35,Shoes,Women
+94,Chasing The Thrill Over The Knee Boots - Pink,44825.85,Shoes,Women
+95,An Iconic Look Mules - Orange,13715.85,Shoes,Women
+96,Valet Only Mules - Orange,18290.85,Shoes,Women
+97,Pretty In Thigh High Boots - Black,36590.85,Shoes,Women
+98,Give You What You Need Boots - Black,27440.85,Shoes,Women
+99,Nadine Overlay Wedge Boots - Silver,36590.85,Shoes,Women
+100,Carnival Nights Embellished Boots - Silver,32015.85,Shoes,Women
+101,Black Pleated Micro Mini Skirt,15800.00,Skirt,Women
+102,Khaki Belt Pocket Slit Skirt,15800.00,Skirt,Women
+103,Multi Mini Skirt,7800.00,Skirt,Women
+104,POCKET DETAILED BELTED MINI SKIRT,13800.00,Skirt,Women
+105,BLACK ZEBRA MESH SKIRT,13800.00,Skirt,Women
+106,LAVENDER PLEATED SKIRT,19800.00,Skirt,Women
+107,ORANGE PLEATED MIDI SKIRT,15800.00,Skirt,Women
+108,PINK PLEATED MIDI SKIRT,15800.00,Skirt,Women
+109,MUSTARD A-LINE MINI SKIRT,12800.00,Skirt,Women
+110,MERALD PU CUTOUT MINI SKIRT,13800.00,Skirt,Women
+111,ROYALE BLUE PLEATED SKIRT,19800.00,Skirt,Women
+112,BLACK PU CUTOUT MINI SKIRT,13800.00,Skirt,Women
+113,KHAKI CARGO MINI SKIRT,13800.00,Skirt,Women
+114,BLACK FRINGE MINI BODYCON SKIRT,11800.00,Skirt,Women
+115,LEOPARD PRINT SATIN TIE SIDE MINI SKIRT,9800.00,Skirt,Women
+116,BLACK SATIN MINI SKIRT,9800.00,Skirt,Women
+117,PINK FRINGE MINI BODYCON SKIRT,11800.00,Skirt,Women
+118,BLACK SEQUIN MINI SKIRT,12800.00,Skirt,Women
+119,PINK SATIN MIDI SKIRT,12800.00,Skirt,Women
+120,STONE SPLIT MINI SKIRT,9800.00,Skirt,Women
+121,PINK CORSET SEAM DETAIL MINI SKIRT,11800.00,Skirt,Women
+122,Ed Hardy Love Kills Beanie - Black/combo,13491.00,Accessories,Women
+123,Hardly Working Utility Belt - Black,8991.00,Accessories,Women
+124,Classy Babe Earrings - Gold,7191.00,Accessories,Women
+125,Manifest It Handbag - Gold,26991.00,Accessories,Women
+126,Glam Cross Earrings - Silver,7191.00,Accessories,Women
+127,What You Tell Me Layered Necklace - Silver,7191.00,Accessories,Women
+128,Crazy Fur You Bucket Hat - Black,13491.00,Accessories,Women
+129,Cheetah Sisters Shoulder Bag - Black,22491.00,Accessories,Women
+130,Cuddle With Me Hat - Tan,17991.00,Accessories,Women
+131,Cheetah Sisters Shoulder Bag - Taupe,22491.00,Accessories,Women
+132,Classy Babe Earrings - Silver,7191.00,Accessories,Women
+133,Aspen Ready Gloves - Pink,11691.00,Accessories,Women
+134,Bonjour Mi Amour Beret - Ivory,11691.00,Accessories,Women
+135,Everyday Chain Necklace - Gold,8991.00,Accessories,Women
+136,The Pearliest Girl Fedora - Black,26991.00,Accessories,Women
+137,Can't Hold Me Back Hoops - Gold,11691.00,Accessories,Women
+138,New Chances Earrings - Silver,7191.00,Accessories,Women
+139,Stone Hearts 5 Piece Ring Set - Clear/Silver,8991.00,Accessories,Women
+140,Should Have Been Us Belt - Black,8991.00,Accessories,Women
+141,Modern Babe Handbag - Denim,26991.00,Accessories,Women
+142,Never Bored Hoop Earrings - Gold,8991.00,Accessories,Women
+143,Always Covered Handbag - Black,35991.00,Accessories,Women
+144,Quilted Cabbie Hat - Black,13491.00,Accessories,Women
+145,Best To Me 5 Piece Ring Set - Silver,8991.00,Accessories,Women
+146,Men's Stripped business Suit | Black,36500.00,Men's Suit,Men
+147,Men's Suit With Single Button |Black,34500.00,Men's Suit,Men
+148,Men's Suit with Single Button |Grey,34500.00,Men's Suit,Men
+149,Men's Suit With Single Button | Navy Blue,34500.00,Men's Suit,Men
+150,Men's Suit with Single Button | Grey,34500.00,Men's Suit,Men
+151,Men's Suit with Single Button |Royal Blue,34500.00,Men's Suit,Men
+152,Men's 3-piece business Suit | Black,37500.00,Men's Suit,Men
+153,Men's 3-piece business Suit | Navy Blue,37500.00,Men's Suit,Men
+154,Men's 3-piece business Suit | Grey,37500.00,Men's Suit,Men
+155,Men's 3-piece business Suit | Royal blue,37500.00,Men's Suit,Men
+156,Men's Tuxedo with Single Button |NavyBlue,37500.00,Men's Suit,Men
+157,Off White Men's Tuxedo with Single Button,37500.00,Men's Suit,Men
+158,Men's Tuxedo Single Button |Black,37500.00,Men's Suit,Men
+159,Men's Tuxedo with Single Button |white,37500.00,Men's Suit,Men
+160,Men's Tuxedo with Single Button |Royal Blue,37500.00,Men's Suit,Men
+161,Men's Tuxedo with Single Button |Grey,37500.00,Men's Suit,Men
+162,Men's Tuxedo with Single Button |Black,37500.00,Men's Suit,Men
+163,SIZE 58 3 Piece Men's Suit with Single Button | Army Green,45500.00,Men's Suit,Men
+164,AM block check men's Shirt | Sky blue,18999.00,Shirt,Men
+165,TM Martin Bishop Collar Shirt | Black,18999.00,Shirt,Men
+166,TM Martin Bishop Collar Shirt | White spec,18999.00,Shirt,Men
+167,FSH two toned Dress shirt | Pastel,19999.00,Shirt,Men
+168,AM check men's Shirt | Blue,18999.00,Shirt,Men
+169,AM check men's Shirt | White,18999.00,Shirt,Men
+170,TM Martin men's classic Shirt | Burgundy,18999.00,Shirt,Men
+171,TM Martin men's classic Shirt | White,18999.00,Shirt,Men
+172,AG designer plain polo shirt | Beige,19999.00,Shirt,Men
+173,TH crested Tee-shirt | Navy Blue,18999.00,Shirt,Men
+174,LST croc print polo shirt | Navy blue,19999.00,Shirt,Men
+175,AM crested designer polo shirt | Black,19999.00,Shirt,Men
+176,FSH drip print Dress shirt | Orange,18999.00,Shirt,Men
+177,FSH floral print Dress shirt | Blue,18999.00,Shirt,Men
+178,Shortsleeve Ricardo Martinez Print Shirt | County,18999.00,Shirt,Men
+179,PRL trophy two toned polo shirt | Grey,18999.00,Shirt,Men
+180,PRL trophy two toned polo shirt | Black,18999.00,Shirt,Men
+181,JP peacock print dress Shirt | Blue,18999.00,Shirt,Men
+182,Shortsleeve Ricardo Martinez Print Shirt | Strands,18999.00,Shirt,Men
+183,PRL trophy two toned polo shirt | Green,18999.00,Shirt,Men
+184,GB leather penny loafers for men | Brown,37500.00,Shoes,Men
+185,BB skin leather Mules | Black,37500.00,Shoes,Men
+186,LB Suede white soles | Black,47500.00,Shoes,Men
+187,LV capped leather laceup shoe | Brown,37500.00,Shoes,Men
+188,GC crested textured white soles | Black,49999.00,Shoes,Men
+189,LV. textured penny loafers | Brown,37500.00,Shoes,Men
+190,TF cracked leather Mules | Black,37500.00,Shoes,Men
+191,VLT crested tassel leather Bold sole | Black,47500.00,Shoes,Men
+192,GB cracked leather loafers | Brown,37500.00,Shoes,Men
+193,GB leather penny loafers for men | Black,37500.00,Shoes,Men
+194,PRL easy suede loafers | Brown,29999.00,Shoes,Men
+195,SF regal textured loafers for men | Black,42500.00,Shoes,Men
+196,LV textured leather monk shoe | Brown,37500.00,Shoes,Men
+197,TF cracked leather Mules | Brown,37500.00,Shoes,Men
+198,TF leather laceup brogues | Dark Brown,37500.00,Shoes,Men
+199,LV. textured penny loafers | Black,37500.00,Shoes,Men
+200,LV poised leather laceup shoe | Brown,37500.00,Shoes,Men
+201,LV capped textued laceup shoe | Black,37500.00,Shoes,Men
+202,CLK capped leather Laceup shoe | Light Brown,37500.00,Shoes,Men
+203,TF leather mens penny loafers | Black,37500.00,Shoes,Men
+204,Premium Chinos Trouser | Navy Blue,19999.00,Trousers,Men
+205,Premium Men's Dress Trouser | Black,27500.00,Trousers,Men
+206,Premium Jeans Trouser | Blue,24500.00,Trousers,Men
+207,Men's Chinos Trouser | Light Grey,12999.00,Trousers,Men
+208,Black Men's office Trouser,12999.00,Trousers,Men
+209,Navy Blue Men's formal Trouser,12999.00,Trousers,Men
+210,Mens dress Trouser | Grain Grey,12999.00,Trousers,Men
+211,Grey Men's formal Trouser,12999.00,Trousers,Men
+212,Men's Chinos Trouser | Cream,12999.00,Trousers,Men
+213,Men's Chinos Trouser | Navy Blue,12999.00,Trousers,Men
+214,Men's Chinos Trouser | Carton,12999.00,Trousers,Men
+215,Premium Chinos Trouser | Beige,19999.00,Trousers,Men
+216,Premium Chinos Trouser | Black,19999.00,Trousers,Men
+217,Premium Chinos Trouser | Brown,19999.00,Trousers,Men
+218,Premium Chinos Trouser | Wine,19999.00,Trousers,Men
+219,Premium Chinos Trouser | Purple,19999.00,Trousers,Men
+220,Premium Chinos Trouser | Carton,19999.00,Trousers,Men
+221,Premium Jeans Trouser | Charcoal Black,19999.00,Trousers,Men
+222,Premium Jeans Trouser | Grain Black,24500.00,Trousers,Men
+223,Men's smart Shorts | Mint,12999.00,Trousers,Men

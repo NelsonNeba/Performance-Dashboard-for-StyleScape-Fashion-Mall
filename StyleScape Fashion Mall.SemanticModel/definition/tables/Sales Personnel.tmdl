@@ -1,0 +1,59 @@
+table 'Sales Personnel'
+	lineageTag: 72613401-46a9-46cc-bafe-cfac5c967bea
+
+	column personnelid
+		dataType: string
+		lineageTag: aab9a47d-3ae6-4feb-8d82-fc8b95ea14d8
+		summarizeBy: none
+		sourceColumn: personnelid
+
+		annotation SummarizationSetBy = Automatic
+
+	column personnelname
+		dataType: string
+		lineageTag: 25238d94-d7fa-4244-ad6f-a959196d659f
+		summarizeBy: none
+		sourceColumn: personnelname
+
+		annotation SummarizationSetBy = Automatic
+
+	column datejoined
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: f8bc8f78-0730-442c-b226-a40700cd6d89
+		summarizeBy: none
+		sourceColumn: datejoined
+
+		variation Variation
+			isDefault
+			relationship: ebae077f-4265-4abf-98ce-830f11005ae9
+			defaultHierarchy: LocalDateTable_7e066349-bf1e-47eb-a31e-db2415a40cbb.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column storeid
+		dataType: string
+		lineageTag: fb4b06b3-b150-4009-ace5-2f45ff5f3151
+		summarizeBy: none
+		sourceColumn: storeid
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Sales Personnel' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("localhost", "StyleScape_db"),
+				    public_salespersonnel = Source{[Schema="public",Item="salespersonnel"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(public_salespersonnel,{{"storeid", type text}, {"personnelid", type text}})
+				in
+				    #"Changed Type"
+
+	changedProperty = Name
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

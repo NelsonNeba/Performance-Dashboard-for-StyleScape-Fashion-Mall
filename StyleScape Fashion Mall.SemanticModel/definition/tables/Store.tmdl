@@ -1,0 +1,41 @@
+table Store
+	lineageTag: fb35034f-8e58-40cf-a0f3-f9400636d75a
+
+	column storeid
+		dataType: string
+		lineageTag: b119b9e1-31bb-4613-a221-5522c6614e70
+		summarizeBy: none
+		sourceColumn: storeid
+
+		annotation SummarizationSetBy = Automatic
+
+	column location
+		dataType: string
+		lineageTag: 5f79092d-c487-4bc3-a066-d25bcf4ba6ff
+		summarizeBy: none
+		sourceColumn: location
+
+		annotation SummarizationSetBy = Automatic
+
+	column country
+		dataType: string
+		lineageTag: 70d3822c-f5b8-4638-a7f3-1ac7d8cb7dae
+		summarizeBy: none
+		sourceColumn: country
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Store = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("localhost", "StyleScape_db"),
+				    public_store = Source{[Schema="public",Item="store"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(public_store,{{"storeid", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

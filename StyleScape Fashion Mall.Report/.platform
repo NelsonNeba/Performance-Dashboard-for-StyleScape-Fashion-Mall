@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "StyleScape Fashion Mall"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "0c2e9f99-234a-4782-ba5d-8a8de5addc5d"
+  }
+}

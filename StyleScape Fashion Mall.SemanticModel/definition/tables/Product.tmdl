@@ -1,0 +1,59 @@
+table Product
+	lineageTag: 50528d63-21a9-4038-be29-f4a6292538b0
+
+	column productid
+		dataType: string
+		lineageTag: b4ebc028-0784-4b1d-827d-1acbe788c0c4
+		summarizeBy: none
+		sourceColumn: productid
+
+		annotation SummarizationSetBy = Automatic
+
+	column productname
+		dataType: string
+		lineageTag: b006ea82-7b11-4972-95a4-1a066f97252a
+		summarizeBy: none
+		sourceColumn: productname
+
+		annotation SummarizationSetBy = Automatic
+
+	column price
+		dataType: double
+		lineageTag: 986e69e8-6ed4-4690-b325-63d18a265cc9
+		summarizeBy: none
+		sourceColumn: price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column subcategory
+		dataType: string
+		lineageTag: 60ca0489-1a6a-4e88-a71b-90d6518c9672
+		summarizeBy: none
+		sourceColumn: subcategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column category
+		dataType: string
+		lineageTag: cdac35c8-5ef9-4466-8bd2-59b4accf9f44
+		summarizeBy: none
+		sourceColumn: category
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Product = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("localhost", "StyleScape_db"),
+				    public_product = Source{[Schema="public",Item="product"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(public_product,{{"productid", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

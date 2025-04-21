@@ -1,0 +1,57 @@
+table Customers
+	lineageTag: d79b52b2-4461-4574-9c68-49f4b4282487
+
+	column customerid
+		dataType: string
+		lineageTag: cf3ee6ec-0893-413f-a32d-229d01773ef0
+		summarizeBy: none
+		sourceColumn: customerid
+
+		annotation SummarizationSetBy = Automatic
+
+	column customername
+		dataType: string
+		lineageTag: 3e73cc36-aab4-431c-b2d9-d9c360a442d7
+		summarizeBy: none
+		sourceColumn: customername
+
+		annotation SummarizationSetBy = Automatic
+
+	column location
+		dataType: string
+		lineageTag: 2b50a1f0-e4be-4103-9069-5ce3197e955d
+		summarizeBy: none
+		sourceColumn: location
+
+		annotation SummarizationSetBy = Automatic
+
+	column phonenumber
+		dataType: string
+		lineageTag: 274db191-c9b6-4927-b67c-07a01f242287
+		summarizeBy: none
+		sourceColumn: phonenumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column email
+		dataType: string
+		lineageTag: 7088c8ed-2df0-480d-83e1-7a902c41f4b8
+		summarizeBy: none
+		sourceColumn: email
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Customers = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("localhost", "StyleScape_db"),
+				    public_customers = Source{[Schema="public",Item="customers"]}[Data],
+				    #"Replaced Value" = Table.ReplaceValue(public_customers,"-","0",Replacer.ReplaceText,{"phonenumber"})
+				in
+				    #"Replaced Value"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

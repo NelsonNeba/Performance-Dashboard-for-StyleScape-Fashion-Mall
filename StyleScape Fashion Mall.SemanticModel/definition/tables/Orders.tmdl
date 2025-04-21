@@ -1,0 +1,113 @@
+table Orders
+	lineageTag: b8174bf3-b4bf-442b-baa7-86d195367f91
+
+	column orderid
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: bd4f29ec-9c51-4280-b52c-cd051aea250a
+		summarizeBy: none
+		sourceColumn: orderid
+
+		annotation SummarizationSetBy = Automatic
+
+	column salesdate
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: e846f1ec-bfc9-454d-9a96-6cced276c219
+		summarizeBy: none
+		sourceColumn: salesdate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column productid
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 85417f51-eda3-4515-849a-095d2e478c9b
+		summarizeBy: none
+		sourceColumn: productid
+
+		annotation SummarizationSetBy = Automatic
+
+	column customerid
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 8a54637e-4c47-48f2-b024-e4b753c2af2d
+		summarizeBy: none
+		sourceColumn: customerid
+
+		annotation SummarizationSetBy = Automatic
+
+	column personnelid
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 7ad923ed-e3d3-40b3-a98d-6f5fe052d441
+		summarizeBy: none
+		sourceColumn: personnelid
+
+		annotation SummarizationSetBy = Automatic
+
+	column saleschannel
+		dataType: string
+		sourceProviderType: nvarchar(50)
+		lineageTag: 5a8fb65c-c8c1-4090-9dfa-607fcd60dc8b
+		summarizeBy: none
+		sourceColumn: saleschannel
+
+		annotation SummarizationSetBy = Automatic
+
+	column paymentmode
+		dataType: string
+		sourceProviderType: nvarchar(50)
+		lineageTag: c920f27b-857e-4de6-9816-0d60d382964a
+		summarizeBy: none
+		sourceColumn: paymentmode
+
+		annotation SummarizationSetBy = Automatic
+
+	column storeid
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e377349b-1327-4b85-a979-f2bf99d66469
+		summarizeBy: none
+		sourceColumn: storeid
+
+		annotation SummarizationSetBy = Automatic
+
+	column quantity
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 5c52b9cc-898a-44a9-b98a-9ff58547d6a6
+		summarizeBy: sum
+		sourceColumn: quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column salesamount
+		dataType: double
+		sourceProviderType: decimal(10, 2)
+		lineageTag: 8f2d0401-d696-46c1-b430-460dcd99471b
+		summarizeBy: sum
+		sourceColumn: salesamount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Orders = m
+		mode: directQuery
+		source =
+				let
+				    Source = Value.NativeQuery(PostgreSQL.Database("localhost", "StyleScape_db"), "SELECT *#(lf)FROM orders#(lf)WHERE salesdate >= (SELECT MAX(salesdate) FROM orders) - INTERVAL '2 weeks'#(lf)AND salesdate <= (SELECT MAX(salesdate) FROM orders)", null, [EnableFolding=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"salesdate", type date}, {"orderid", type text}, {"productid", type text}, {"customerid", type text}, {"personnelid", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

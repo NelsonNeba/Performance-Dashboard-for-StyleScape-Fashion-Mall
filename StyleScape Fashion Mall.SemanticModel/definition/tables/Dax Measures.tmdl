@@ -1,0 +1,212 @@
+table 'Dax Measures'
+	lineageTag: 5442af1b-3acf-4947-9b16-f5f0a25ddbbd
+
+	measure 'Sales CW' =
+			
+			CALCULATE(
+			    SUM(Orders[salesamount]),
+			    'Date Table'[IsLastWeek] = 1    )
+		formatString: "₦"#,0.00;-"₦"#,0.00;"₦"#,0.00
+		lineageTag: de0ae34b-1d71-42a2-bac2-be2fbc03245f
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-NG"}
+
+	measure 'Sales PW' =
+			
+			CALCULATE(
+			    SUM(Orders[salesamount]),
+			    'Date Table'[IsLastWeek] = 0    )
+		formatString: "₦"#,0.00;-"₦"#,0.00;"₦"#,0.00
+		lineageTag: 8571bc13-5aa2-4a62-9ece-cd11511fca03
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-NG"}
+
+	measure 'Orders CW' =
+			
+			CALCULATE(
+			    DISTINCTCOUNT(Orders[orderid]),
+			    'Date Table'[IsLastWeek] = 1    )
+		formatString: #,0
+		lineageTag: 6cf9f68d-1d6d-452e-913d-e8caf6977b6c
+
+	measure 'Orders PW' =
+			
+			CALCULATE(
+			    DISTINCTCOUNT(Orders[orderid]),
+			    'Date Table'[IsLastWeek] = 0    )
+		formatString: 0
+		lineageTag: bdbdc43a-b250-4033-a39c-db894460fb8c
+
+	measure 'Customers CW' =
+			
+			CALCULATE(
+			    DISTINCTCOUNT(Orders[customerid]),
+			    'Date Table'[IsLastWeek] = 1    )
+		formatString: 0
+		lineageTag: 2b189022-83da-4d16-8d07-b171758d3d00
+
+	measure 'Customers PW' =
+			
+			CALCULATE(
+			    DISTINCTCOUNT(Orders[customerid]),
+			    'Date Table'[IsLastWeek] = 0   )
+		formatString: 0
+		lineageTag: 7375ae36-bc49-4fa3-be7f-4cff628d88a8
+
+	measure 'Avg Order Value CW' = [Sales CW]/[Orders CW]
+		formatString: "₦"#,0.00;-"₦"#,0.00;"₦"#,0.00
+		lineageTag: 8b4f3786-ce0b-4161-b13f-fe1e8d09e644
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-NG"}
+
+	measure 'Avg Order Value PW' = [Sales PW]/[Orders PW]
+		lineageTag: 4f8a6864-48a3-451f-939e-c072e20cc4cf
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Sales WoW %' = ```
+			
+			VAR WowValue = DIVIDE([Sales CW] - [Sales PW],[Sales PW])
+			VAR Arrow = SWITCH(TRUE(),
+			    WowValue > 0, "▲",
+			    WowValue < 0, "▼",
+			    "●"
+			)
+			RETURN
+			    Arrow & " " & FORMAT((WowValue), "00.00%") & " vs last week"
+			   
+			```
+		lineageTag: f1287dcb-23fa-4236-b02f-6e4d1c6d8a6e
+
+	measure 'Sales WoW Color' = ```
+			
+			VAR ColorValue = DIVIDE([Sales CW] - [Sales PW],[Sales PW])
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        ISBLANK(ColorValue), "#A9A9A9",   // Gray
+			        ColorValue > 0, "#00B050",        // Green
+			        ColorValue < 0, "#FF0000",        // Red
+			        "#FFC000"                         // Amber
+			    )
+			
+			```
+		lineageTag: 34146495-5846-46fd-8ea2-100ea891be82
+
+		formatStringDefinition = ""
+
+	measure 'Orders WoW %' = ```
+			
+			VAR WowValue = DIVIDE([Orders CW] - [Orders PW],[Orders PW])
+			VAR Arrow = SWITCH(TRUE(),
+			    WowValue > 0, "▲",
+			    WowValue < 0, "▼",
+			    "●"
+			)
+			RETURN
+			    Arrow & " " & FORMAT((WowValue), "00.00%") & " vs last week"
+			   
+			```
+		lineageTag: 18fe126b-4925-4151-9f7c-9149580acb99
+
+	measure 'Orders WoW Color' = ```
+			
+			VAR ColorValue = DIVIDE([Orders CW] - [Orders PW],[Orders PW])
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        ISBLANK(ColorValue), "#A9A9A9",   // Gray
+			        ColorValue > 0, "#00B050",        // Green
+			        ColorValue < 0, "#FF0000",        // Red
+			        "#FFC000"                         // Amber
+			    )
+			
+			```
+		lineageTag: 8b3b30bd-bc42-48c6-81d5-e46a283d8557
+
+	measure 'Customer WoW %' = ```
+			
+			VAR WowValue = DIVIDE([Customers CW] - [Customers PW],[Customers PW])
+			VAR Arrow = SWITCH(TRUE(),
+			    WowValue > 0, "▲",
+			    WowValue < 0, "▼",
+			    "●"
+			)
+			RETURN
+			    Arrow & " " & FORMAT((WowValue), "00.00%") & " vs last week"
+			   
+			```
+		lineageTag: 6f0fe437-1697-4376-be9c-6645cd9d36a1
+
+	measure 'Avg Order Value WoW %' = ```
+			
+			VAR WowValue = DIVIDE([Avg Order Value CW] - [Avg Order Value PW],[Avg Order Value PW])
+			VAR Arrow = SWITCH(TRUE(),
+			    WowValue > 0, "▲",
+			    WowValue < 0, "▼",
+			    "●"
+			)
+			RETURN
+			    Arrow & " " & FORMAT((WowValue), "00.00%") & " vs last week"
+			   
+			```
+		lineageTag: 7bf80162-6e71-4506-8e8b-4095046164fd
+
+	measure 'Customers WoW Color' = ```
+			
+			VAR ColorValue = DIVIDE([Customers CW] - [Customers PW],[Customers PW])
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        ISBLANK(ColorValue), "#A9A9A9",   // Gray
+			        ColorValue > 0, "#00B050",        // Green
+			        ColorValue < 0, "#FF0000",        // Red
+			        "#FFC000"                         // Amber
+			    )
+			
+			```
+		lineageTag: 3bf2924e-d2b8-47cb-b449-432b86a8473b
+
+	measure 'Avg orders WoW Color' = ```
+			
+			VAR ColorValue = DIVIDE([Avg Order Value CW] - [Avg Order Value PW],[Avg Order Value PW])
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        ISBLANK(ColorValue), "#A9A9A9",   // Gray
+			        ColorValue > 0, "#00B050",        // Green
+			        ColorValue < 0, "#FF0000",        // Red
+			        "#FFC000"                         // Amber
+			    )
+			
+			```
+		lineageTag: bd2d12bc-d013-4dc9-9893-79609bfedb95
+
+	measure DateRange = ```
+			
+			VAR MinDate = CALCULATE(MIN('Date Table'[Date]), 'Date Table'[IsLastWeek] = 1)
+			VAR MaxDate = CALCULATE(Max('Date Table'[Date]), 'Date Table'[IsLastWeek] = 1)
+			RETURN
+			    "Date: " & FORMAT(MinDate, "dd-mm-yyyy") & "  –  " & FORMAT(MaxDate, "dd-mm-yyyy")
+			
+			```
+		lineageTag: 289eb29e-b444-407b-a86c-640d5b9e6225
+
+	measure 'Sales Channels' = ```
+			DISTINCTCOUNT(Orders[saleschannel]) 
+			```
+		formatString: 0
+		lineageTag: 805c3c17-5b1c-445a-b937-3a8396119a54
+
+	partition 'Dax Measures' = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column1"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+

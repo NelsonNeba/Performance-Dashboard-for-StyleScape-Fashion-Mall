@@ -1,0 +1,112 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 986,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 112.5
+          },
+          "nodeIndex": "Customers",
+          "nodeLineageTag": "d79b52b2-4461-4574-9c68-49f4b4282487",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 287.543122,
+            "y": 234.34141699999998
+          },
+          "nodeIndex": "Orders",
+          "nodeLineageTag": "b8174bf3-b4bf-442b-baa7-86d195367f91",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 568,
+            "y": 112.5
+          },
+          "nodeIndex": "Product",
+          "nodeLineageTag": "50528d63-21a9-4038-be29-f4a6292538b0",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 518.81875317194522
+          },
+          "nodeIndex": "Store",
+          "nodeLineageTag": "fb35034f-8e58-40cf-a0f3-f9400636d75a",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 272.35543873930897,
+            "y": 682.67308987252591
+          },
+          "nodeIndex": "Date Table",
+          "nodeLineageTag": "39b6ea53-cc90-4c56-98ac-9eef76dca9e8",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 1136,
+            "y": 256.08417485214477
+          },
+          "nodeIndex": "Dax Measures",
+          "nodeLineageTag": "5442af1b-3acf-4947-9b16-f5f0a25ddbbd",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 567.222981508287,
+            "y": 529.24214045475719
+          },
+          "nodeIndex": "Sales Personnel",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 88.541666666666657,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}
