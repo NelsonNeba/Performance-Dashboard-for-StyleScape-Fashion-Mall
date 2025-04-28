@@ -1,0 +1,30 @@
+relationship ebae077f-4265-4abf-98ce-830f11005ae9
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Sales Personnel'.datejoined
+	toColumn: LocalDateTable_7e066349-bf1e-47eb-a31e-db2415a40cbb.Date
+
+relationship dd599da3-f765-42f7-866e-b5734a716aa9
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Date Table'.Date
+	toColumn: LocalDateTable_d15a1697-a174-4751-96ad-0452732424f9.Date
+
+relationship AutoDetected_3e05614c-353d-489a-966f-cee794bc0174
+	fromColumn: Orders.customerid
+	toColumn: Customers.customerid
+
+relationship AutoDetected_ae3b9689-6a7e-4b9b-b132-d1f79f91e42c
+	fromColumn: Orders.productid
+	toColumn: Product.productid
+
+relationship AutoDetected_03ec0741-1dd9-4cd5-93d8-58e28a2a62f3
+	fromColumn: Orders.personnelid
+	toColumn: 'Sales Personnel'.personnelid
+
+relationship AutoDetected_2954320a-8bc7-441b-bcf8-d394ec6b449e
+	fromColumn: Orders.storeid
+	toColumn: Store.storeid
+
+relationship 1aa588d3-b4f4-d706-b927-87c0159a5ea6
+	fromColumn: Orders.salesdate
+	toColumn: 'Date Table'.Date
+

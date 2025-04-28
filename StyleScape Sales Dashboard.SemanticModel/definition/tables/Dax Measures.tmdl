@@ -198,6 +198,28 @@ table 'Dax Measures'
 		formatString: 0
 		lineageTag: 805c3c17-5b1c-445a-b937-3a8396119a54
 
+	measure SalesPercentPerStore = ```
+			
+			DIVIDE(
+			    [Sales CW],
+			    CALCULATE([Sales CW], ALL(Store[location]))
+			)
+			
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: a202662b-7cbf-4edb-9b9d-4db5b2496b3d
+
+	measure SalesPercentPerSub-category = ```
+			
+			DIVIDE(
+			    [Sales CW],
+			    CALCULATE([Sales CW], ALL('Product'[subcategory]))
+			)
+			
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 2fb8d019-7ba1-41ba-9e03-da73ef31c7a4
+
 	partition 'Dax Measures' = m
 		mode: import
 		source =

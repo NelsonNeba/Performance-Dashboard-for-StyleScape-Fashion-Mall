@@ -3,6 +3,8 @@
 
 # 👗 **Sales Excellence in Style: Crafting a Cutting-Edge Performance Dashboard for StyleScape Fashion Mall**
 
+![Dashboard](https://github.com/NelsonNeba/Performance-Dashboard-for-StyleScape-Fashion-Mall/blob/main/Assets/Dashboard.png)
+
 This project was a hands-on opportunity to master **Power BI**, develop **data visualization** expertise, and apply these skills to a real-world scenario in the **retail fashion industry**. I designed and deployed an interactive dashboard that delivered **real-time sales insights** to decision-makers at StyleScape’s Nigerian division of StyleScape Fashion Mall, enabling more **strategic and efficient** decision-making.
 
 ---
@@ -96,6 +98,10 @@ An **interactive sales dashboard** would:
 
 ### 🧾 Sales Orders  
 - `OrderID`, `SalesDate`, `ProductID`, `CustomerID`, `PersonnelID`, `SalesChannel`, `Quantity`, `SalesAmount`, `PaymentMode`, `StoreID`
+
+
+![ERD](https://github.com/NelsonNeba/Performance-Dashboard-for-StyleScape-Fashion-Mall/blob/main/Assets/ERD.png)
+
 
 ---
 

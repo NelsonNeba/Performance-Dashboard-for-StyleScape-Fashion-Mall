@@ -54,6 +54,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "Total Sales": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -75,20 +85,9 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.9
 			          }
-			        }
-			      ]
-			    },
-			    "orders.saleschannel": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Orders",
-			          "ConceptualProperty": "saleschannel"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
+			        },
 			        {
-			          "Sales Channel": {
+			          "Orders Nos": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -131,6 +130,48 @@ cultureInfo en-US
 			      "Terms": [
 			        {
 			          "Avg Order Value": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dax_measures.salespercentperstore": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dax Measures",
+			          "ConceptualProperty": "SalesPercentPerStore"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Percentage": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dax_measures.avg_order_value_pw": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dax Measures",
+			          "ConceptualProperty": "Avg Order Value PW"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Avg Order Value Previous week": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",

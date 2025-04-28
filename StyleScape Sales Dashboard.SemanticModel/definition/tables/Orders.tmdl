@@ -1,10 +1,9 @@
 table Orders
-	lineageTag: b8174bf3-b4bf-442b-baa7-86d195367f91
+	lineageTag: 5361bdf7-378d-410a-8f9c-44e6b49803f8
 
 	column orderid
 		dataType: string
-		sourceProviderType: nvarchar(max)
-		lineageTag: bd4f29ec-9c51-4280-b52c-cd051aea250a
+		lineageTag: 53751586-2208-4620-afe5-ee63c9c25b62
 		summarizeBy: none
 		sourceColumn: orderid
 
@@ -13,8 +12,7 @@ table Orders
 	column salesdate
 		dataType: dateTime
 		formatString: Long Date
-		sourceProviderType: date
-		lineageTag: e846f1ec-bfc9-454d-9a96-6cced276c219
+		lineageTag: 2c6e3135-90f2-492d-bcc0-86deec6f082b
 		summarizeBy: none
 		sourceColumn: salesdate
 
@@ -24,8 +22,7 @@ table Orders
 
 	column productid
 		dataType: string
-		sourceProviderType: nvarchar(max)
-		lineageTag: 85417f51-eda3-4515-849a-095d2e478c9b
+		lineageTag: 74c7f5c7-b592-48b3-a408-4fc8e1aa8027
 		summarizeBy: none
 		sourceColumn: productid
 
@@ -33,8 +30,7 @@ table Orders
 
 	column customerid
 		dataType: string
-		sourceProviderType: nvarchar(max)
-		lineageTag: 8a54637e-4c47-48f2-b024-e4b753c2af2d
+		lineageTag: cf010708-1b8f-45fc-abc1-983c5831c117
 		summarizeBy: none
 		sourceColumn: customerid
 
@@ -42,8 +38,7 @@ table Orders
 
 	column personnelid
 		dataType: string
-		sourceProviderType: nvarchar(max)
-		lineageTag: 7ad923ed-e3d3-40b3-a98d-6f5fe052d441
+		lineageTag: d2e284a9-fa60-4c89-8490-fac1a247691e
 		summarizeBy: none
 		sourceColumn: personnelid
 
@@ -51,8 +46,7 @@ table Orders
 
 	column saleschannel
 		dataType: string
-		sourceProviderType: nvarchar(50)
-		lineageTag: 5a8fb65c-c8c1-4090-9dfa-607fcd60dc8b
+		lineageTag: 2149cbf5-8286-4d9a-8c34-31a986d636ba
 		summarizeBy: none
 		sourceColumn: saleschannel
 
@@ -60,18 +54,15 @@ table Orders
 
 	column paymentmode
 		dataType: string
-		sourceProviderType: nvarchar(50)
-		lineageTag: c920f27b-857e-4de6-9816-0d60d382964a
+		lineageTag: 3fba5c28-501d-4526-a939-2a9b1015663a
 		summarizeBy: none
 		sourceColumn: paymentmode
 
 		annotation SummarizationSetBy = Automatic
 
 	column storeid
-		dataType: int64
-		formatString: 0
-		sourceProviderType: int
-		lineageTag: e377349b-1327-4b85-a979-f2bf99d66469
+		dataType: string
+		lineageTag: 8b1fa480-288c-462e-915d-a4ce550f4217
 		summarizeBy: none
 		sourceColumn: storeid
 
@@ -80,8 +71,7 @@ table Orders
 	column quantity
 		dataType: int64
 		formatString: 0
-		sourceProviderType: int
-		lineageTag: 5c52b9cc-898a-44a9-b98a-9ff58547d6a6
+		lineageTag: c9061130-5985-41dd-a0d9-8999451ef6dd
 		summarizeBy: sum
 		sourceColumn: quantity
 
@@ -89,8 +79,7 @@ table Orders
 
 	column salesamount
 		dataType: double
-		sourceProviderType: decimal(10, 2)
-		lineageTag: 8f2d0401-d696-46c1-b430-460dcd99471b
+		lineageTag: c87a6a4c-9372-41c7-a5c0-f428d29cc649
 		summarizeBy: sum
 		sourceColumn: salesamount
 
@@ -99,11 +88,11 @@ table Orders
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	partition Orders = m
-		mode: directQuery
+		mode: import
 		source =
 				let
-				    Source = Value.NativeQuery(PostgreSQL.Database("localhost", "StyleScape_db"), "SELECT *#(lf)FROM orders#(lf)WHERE salesdate >= (SELECT MAX(salesdate) FROM orders) - INTERVAL '2 weeks'#(lf)AND salesdate <= (SELECT MAX(salesdate) FROM orders)", null, [EnableFolding=true]),
-				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"salesdate", type date}, {"orderid", type text}, {"productid", type text}, {"customerid", type text}, {"personnelid", type text}})
+				    Source = Value.NativeQuery(PostgreSQL.Database("127.0.0.1", "StyleScape_db"), "SELECT *#(lf)FROM orders#(lf)WHERE salesdate >= (SELECT MAX(salesdate) FROM orders) - INTERVAL '2 weeks'#(lf)AND salesdate <= (SELECT MAX(salesdate) FROM orders)", null, [EnableFolding=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"orderid", type text}, {"salesdate", type date}, {"productid", type text}, {"customerid", type text}, {"personnelid", type text}, {"storeid", type text}})
 				in
 				    #"Changed Type"
 
